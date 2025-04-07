@@ -4,7 +4,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building...'
+                sh 'echo "Building..."'
+                sh ''' echo "Se pueden ejecutar más acciones aquí"
+                       ls -lah
+                '''
             }
         }
 
