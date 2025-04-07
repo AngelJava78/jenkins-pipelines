@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    environment {
+        PHONE = '55-3560-6752'
+        EMAIL = 'angel_java@hotmail.com'
+    }
+
+    stages {
+        stage('First step') {
+            steps {
+                sh 'echo $AUTHOR'
+                sh 'echo $PHONE'
+            }
+        }
+    }
+}
