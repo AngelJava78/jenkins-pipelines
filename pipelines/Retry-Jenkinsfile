@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+    stages {
+        stage ('Retry'){
+            steps {
+                retry(3) {
+                    sh 'No voy a funcionar :C'
+                }
+            }
+        }
+    }
+}
