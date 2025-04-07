@@ -8,8 +8,10 @@ pipeline {
                     sh 'echo Hola'
                 }
 
-                timeout(time: 3, unit: 'SECONDS') {
-                    sh 'sleep 5'
+                timeout(time: 2, unit: 'SECONDS') {
+                    retry(5) {
+                        sh 'sleep 3'
+                    }
                 }
             }
         }
