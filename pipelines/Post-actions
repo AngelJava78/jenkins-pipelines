@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('First stage') {
             steps {
-                sh 'First step in first stage¿
+                sh 'First step in first stage'
             }
         }
     }
