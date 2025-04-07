@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('First stage') {
+            steps {
+                sh 'First step in first stage¿
+            }
+        }
+    }
+
+    post {
+        always { 
+            echo 'This step will be executed always.'
+        }
+        success {
+            echo 'This step will be executed if the job works fine.'
+        }
+        failure {
+            echo 'This step will be executed if the job failed.'
+        }
+        unstable {
+            echo 'This step will be executed if the job behaves unstable'
+        }
+        changed {
+            echo 'This step will be executed if the job failed previously but it works fine or viceversa.''
+        }
+    }
+}
