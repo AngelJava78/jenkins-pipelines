@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('FirstStage') {
+        stage('First Stage') {
             steps {
-                sh 'First step in first stage'
+                sh 'echo First step in first stage'
             }
         }
     }
